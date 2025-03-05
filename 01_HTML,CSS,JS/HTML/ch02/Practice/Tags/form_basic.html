@@ -7,28 +7,14 @@
   </head>
   <body>
     <form>
-      <!-- 사용자 입력 -->
-      <input type="text" name="text" placeholder="이름 입력하셔" /><br />
-      <input type="password" name="password" /><br />
-      <input type="file" name="file" value="file" /><br />
-
-      <!-- 미선택 시 query에 넘어가지 않음 -->
-      <input type="checkbox" name="checkbox" value="checkbox" /><br />
-      <input type="radio" name="radio" value="radio" /><br />
-
-      <!-- 안 보임 -->
-      <input type="hidden" name="hidden" value="hidden" /><br />
-
-      <!-- 버튼
-        input: 버튼 이름으로 text만 입력 가능
-        button: 이미지 버튼이나 요상하게 생긴 버튼 이름 가능 (default: submit)
-      -->
-      <input type="button" value="버튼 이름" /><br />
-      <button type="button">ㄹㅇ 버튼 태그</button> <br />
-
-      <input type="reset" value="reset" /><br />
-      <input type="submit" value="submit" /><br />
-      <input type="image" src="https://placehold.co/100x100" /><br />
+      <label for="name">이름</label>
+      <input type="text" name="name" id="name" /><br />
+      <input id="male" type="radio" name="gender" value="m" />
+      <label for="male">남자</label>
+      <input id="female" type="radio" name="gender" value="w" />
+      <label for="female">여자</label><br />
+      <input type="submit" value="가입" />
     </form>
   </body>
 </html>
+○ form_select.html ○ form_selectMultiple.html

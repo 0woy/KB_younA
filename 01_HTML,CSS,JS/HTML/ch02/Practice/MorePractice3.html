@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>1. 로그인 화면</h2>
+      <fieldset>
+        <legend>로그인</legend>
+        <div>
+          <label for="id"><b>사용자 ID</b></label>
+          <input
+            type="text"
+            name="id"
+            id="id"
+            placeholder="id 입력하세요"
+            required
+          />
+        </div>
+        <div>
+          <label for="pw"><b>비밀번호</b></label>
+          <input
+            type="password"
+            name="password"
+            id="pw"
+            placeholder="비밀번호 입력하세요"
+            required
+          />
+        </div>
+        <input type="submit" value="확인" />
+        <input type="reset" value="다시쓰기" />
+      </fieldset>
+    </div>
+    <div>
+      <h2>2. 회원가입 화면</h2>
+      <fieldset>
+        <legend>회원가입</legend>
+        <table>
+          <tr>
+            <td><b>사용자 ID</b></td>
+            <td><input type="text" name="id" placeholder="ID 입력" required/></td>
+          </tr>
+          <tr>
+            <td><b>비밀번호</td>
+            <td><input type="password" name="password" placeholder="비밀번호 입력" required /></td>
+          </tr>
+          <tr>
+            <td><b>비밀번호 확인</b></td>
+            <td><input type="password" name="password" required /></td>
+          </tr>
+          <tr>
+            <td><b>이름</b></td>
+            <td><input type="text" name="name" required/></td>
+          </tr>
+          <tr>
+            <td><b>성별</b></td>
+            <td>            
+                <input type="radio" id="male" name="gender" value="m">
+                <label for="male">남</label>
+                <input type="radio" id="female" name="gender" value="w">
+                <label for="female">여</label>
+            </td>
+          </tr>
+          <tr>
+            <td><b>취미</b></td>
+            <td>            
+                <input type="checkbox" id="soccer" name="hobby" value="soccer">
+                <label for="soccer">축구</label>
+                <input type="checkbox" id="baseball" name="hobby" value="baseball">
+                <label for="baseball">야구</label>
+                <input type="checkbox" id="vollyball" name="hobby" value="vollyball">
+                <label for="vollyball">배구</label>
+                <input type="checkbox" id="basketball" name="hobby" value="basketball">
+                <label for="basketball">농구</label>
+            </td>
+          </tr>
+          <tr>
+            <td><b>email</b></td>
+            <td><input type="email" placeholder="이메일 입력"></td>
+          </tr>
+          <tr>
+            <td><b>역할</b></td>
+            <td><select>
+                <option>ADMIN</option>
+                <option>관리자</option>
+                <option>일반회원</option>
+            </select></td>
+          </tr>
+        </table>
+        <input type="submit" value="확인" />
+        <input type="reset" value="다시쓰기" />
+      </fieldset>
+    </div>
+    
+  </body>
+</html>

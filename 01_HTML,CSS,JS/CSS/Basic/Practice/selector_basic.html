@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        color: red;
+      }
+      #basic {
+        background-color: orange;
+      }
+
+      #wrap {
+        width: 800px;
+        margin: 0 0;
+        overflow: hidden;
+      }
+      p {
+        color: blue;
+      }
+      #header {
+        width: 800px;
+        margin: 0 0;
+        background-color: red;
+      }
+      #header > h1 {
+        color: black;
+      }
+
+      #aside,
+      #aside > h1 {
+        width: 200px;
+        float: left;
+        color: black;
+        background-color: blue;
+      }
+
+      #content,
+      #content > h1 {
+        color: black;
+        width: 600px;
+        float: left;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="basic">CSS3 선택자 기본</h1>
+    <hr />
+    <h1>제목 글자</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+      sed molestiae commodi consectetur sequi adipisci? Iure est suscipit fuga,
+      veritatis laborum eum inventore asperiores at error nam neque possimus
+      aliquam.
+    </p>
+    <hr />
+    <div id="header">
+      <h1>#header 태그</h1>
+    </div>
+    <div id="wrap">
+      <div id="aside"><h1>#aside 태그</h1></div>
+      <div id="content"><h1>#content 태그</h1></div>
+    </div>
+  </body>
+</html>

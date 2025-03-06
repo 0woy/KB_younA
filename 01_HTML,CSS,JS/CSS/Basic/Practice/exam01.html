@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      display: inline-block;
+      background-color: red;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      color: white;
+    }
+
+    #down:hover {
+      left: 25px;
+      top: 25px;
+    }
+    #up:hover {
+      right: 25px;
+      bottom: 25px;
+    }
+
+    #up:hover,
+    #down:hover {
+      position: relative;
+      background-color: blue;
+    }
+    div:active {
+      background-color: green;
+    }
+  </style>
+  <body>
+    <body>
+      <h3>상대배치, relative</h3>
+      <hr />
+      <div>T</div>
+      <div id="down">h</div>
+      <div>a</div>
+      <div>n</div>
+      <div id="up">k</div>
+      <div>s</div>
+    </body>
+  </body>
+</html>

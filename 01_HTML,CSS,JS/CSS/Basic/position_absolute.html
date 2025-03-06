@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      #container {
+        position: relative;
+        width: 400px;
+        height: 120px;
+        border: 3px solid deepskyblue;
+        overflow: hidden;
+      }
+
+      .box:nth-child(1) {
+        background-color: red;
+        top: 10px;
+        left: 10px;
+        z-index: 3;
+      }
+      .box:nth-child(2) {
+        background-color: teal;
+        top: 50px;
+        left: 50px;
+        z-index: 2;
+      }
+      .box:nth-child(3) {
+        background-color: blueviolet;
+        top: 100px;
+        left: 100px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, incidunt?
+    </h1>
+    <div id="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

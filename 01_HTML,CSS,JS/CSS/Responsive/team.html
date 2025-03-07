@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap,
+      #section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #section {
+        margin: 10px 0px;
+        text-align: center;
+      }
+      .nav {
+        float: left;
+      }
+      li {
+        list-style: none;
+        margin: 3px;
+        padding: 15px 30px;
+        background-color: gray;
+        border-radius: 10%;
+      }
+      a {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      img {
+        width: 80%;
+        object-fit: cover;
+        transition: all 0.35s linear;
+      }
+      img:hover {
+        transform: scale(1.05);
+      }
+      footer > img {
+        width: 15%;
+        border-radius: 3%;
+      }
+      article {
+        margin-bottom: 5px;
+      }
+      hr {
+        border: 2px solid gray;
+        margin: 20px 0;
+      }
+      button {
+        position: fixed;
+        bottom: 5px;
+        right: 3px;
+        border-radius: 50%;
+        padding: 10px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <button><a href="#">up</a></button>
+      <header class="menu">
+        <ul>
+          <li class="nav"><a href="#secion">상품</a></li>
+          <li class="nav"><a href="#detail">상세</a></li>
+          <li class="nav"><a href="#review">후기</a></li>
+          <li class="nav"><a href="#">문의</a></li>
+        </ul>
+      </header>
+
+      <section id="section">
+        <article>
+          <img src="crygom.jpg" />
+          <h2>부아아앙</h2>
+          <h1>망곰이</h1>
+          <hr />
+          <p id="detail">망곰이가 너무 슬프게 울부짖고 있다.</p>
+        </article>
+        <article>
+          <img src="hanbit.jpg" />
+          <h2>부아아앙</h2>
+          <h1>한빛</h1>
+          <hr />
+          <p>망곰이가 울부짖는 이유는 햄터가 집을 나갔기 때문이다.</p>
+        </article>
+        <article>
+          <img src="crygom.jpg" />
+          <h2>부아아앙</h2>
+          <h1>망곰이</h1>
+          <hr />
+          <p>햄터를 찾으러 간 망곰이는 슬프게 울부짖고 있다.</p>
+        </article>
+        <article>
+          <img src="crygom.jpg" />
+          <h2>부아아앙</h2>
+          <h1>망곰이</h1>
+          <hr />
+          <p>왜냐하면 사실 햄터가 집에 있었기 떄문이다.</p>
+        </article>
+      </section>
+      <footer id="review">
+        <h3>상품 후기</h3>
+        <img src="hanbit.jpg" />
+        <img src="hanbit.jpg" />
+        <img src="hanbit.jpg" />
+        <img src="hanbit.jpg" />
+      </footer>
+    </div>
+  </body>
+</html>

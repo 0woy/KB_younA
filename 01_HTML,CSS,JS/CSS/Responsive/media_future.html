@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* 기기 너비에 따른 속성 부여 */
+    /* smart phone */
+    @media screen and (max-width: 767px) {
+      body {
+        background-color: yellow;
+      }
+    }
+
+    /* tablet */
+    @media screen and (min-width: 768px) and (max-width: 959px) {
+      body {
+        background-color: green;
+      }
+    }
+    /* desktop */
+    @media screen and (min-width: 960px) {
+      body {
+        background-color: red;
+      }
+
+      /* 기기 방향에 따른 속성 부여 */
+      @media screen and (orientation: portrait) {
+        body {
+          background-color: blueviolet;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: blue;
+        }
+      }
+    }
+  </style>
+  <body>
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro sint
+      adipisci quas praesentium, voluptatem id, accusantium deserunt nesciunt
+      iusto exercitationem dignissimos ratione. Repudiandae inventore quis vitae
+      eveniet officiis aliquam, fugit, nam distinctio dolorum ea illo temporibus
+      nesciunt a debitis quasi suscipit sequi eaque error? Saepe cum voluptatem
+      possimus porro accusamus corporis laudantium, iure atque autem quisquam
+      odit sint iste cupiditate ullam expedita dolores, maiores error! Odit
+      magni, nesciunt ipsam optio amet, ducimus recusandae quaerat laborum
+      praesentium repellendus nisi eum. Sapiente, veritatis, nesciunt optio
+      cumque eligendi suscipit nemo harum vel magni modi nam omnis sed quia fuga
+      inventore ad eum corporis!
+    </p>
+  </body>
+</html>

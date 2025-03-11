@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        //Q5 그라데이션 효과
+        let div2 = document.getElementById('gradient');
+        let backdivs = '';
+        for (let i = 0; i < 256; i++) {
+          backdivs += '<div></div>';
+        }
+        div2.innerHTML = backdivs;
+
+        let divs = document.querySelectorAll('div');
+        for (let i = 0; i < divs.length; i++) {
+          divs[i].style.height = '2px';
+          divs[i].style.backgroundColor = 'rgb(' + i + ',' + i + ',' + i + ')';
+        }
+
+        // Q6 JS 이미지 소스 교체
+        let image = document.getElementById('image');
+        image.src = 'https://placehold.co/300x200';
+        image.width = 300;
+        image.height = 200;
+
+        //Q7 BODY 태그 속성 조작
+        document.body.setAttribute('data-custom', 'value');
+        let data = document.body.getAttribute('data-custom');
+        // alert(data);
+
+        //Q8 1초마다 현재시간 출력
+        let clock = document.getElementById('clock');
+        clock.style.color='red'
+        setInterval(() => {
+          let now = new Date();
+          clock.innerHTML= now.toString();
+        }, 1000);
+
+        let btn = document.getElementById('button');
+        btn.onclick = function(){
+            alert('click');
+        };
+        
+      });
+    </script>
+  </head>
+  <body>
+    <div id="gradient"></div>
+    <div><img id="image" /></div>
+    <hr />
+      <h1 id="clock"></h1>
+    </div>
+    <button id=button">btn</button>
+  </body>
+</html>

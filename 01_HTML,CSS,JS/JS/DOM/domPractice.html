@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Q2 객체 한 개 선택
+        let header = document.querySelector('h1');
+        header.style.color = 'orange';
+        header.style.backgroundColor = 'red';
+        header.innerHTML = 'From JavaScript';
+
+        // Q3 모든 태그 배열 처리
+        let all = document.querySelectorAll('h2');
+        for (let i = 0; i < all.length; i++) {
+          all[i].style.color = 'darkblue';
+          all[i].style.backgroundColor = 'yellow';
+          all[i].innerHTML = "0woy's code";
+        }
+
+        // Q4 단순 텍스트 출력  & HTML 태그 적용 출력
+        // div.textContent = output;
+        let div = document.getElementById('for');
+        let output = '';
+        for (let i = 0; i < 10; i++) {
+          output += '<h1> Header - ' + i + '</h1>';
+        }
+        div.innerHTML = output;
+      });
+      //Q3
+    </script>
+  </head>
+  <body>
+    <h1>header</h1>
+    <hr />
+    <h2>header</h2>
+    <h2>header</h2>
+    <h2>header</h2>
+    <hr />
+    <div id="for"></div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Q1 name 값 콘솔에 출력
+        let submit = document.getElementById('btn');
+        submit.onclick = function () {
+          let name = document.getElementById('name');
+          console.log(name.value);
+        };
+
+        // Q2 checkbox 값 콘솔에 출력
+        let check = document.getElementById('cbtn');
+        check.onclick = function () {
+          let all = document.querySelectorAll('input[name=food]');
+          let result = '';
+          for (let i = 0; i < all.length; i++) {
+            if (all[i].checked) {
+              result += all[i].value + ' ';
+            }
+          }
+          if (result.length > 0) console.log(result);
+        };
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="name">이름:</label>
+      <input type="text" id="name" name="name" size="30" />
+      <input type="button" value="전송" id="btn" />
+    </form>
+    <form>
+      <div>
+        좋아하는 음식은?
+        <label><input type="checkbox" name="food" value="라면" /> 라면</label>
+        <label><input type="checkbox" name="food" value="만두" /> 만두</label>
+        <label
+          ><input type="checkbox" name="food" value="불고기" /> 불고기</label
+        >
+        <input id="cbtn" type="button" value="전송" />
+      </div>
+    </form>
+  </body>
+</html>

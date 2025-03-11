@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let headers = document.querySelectorAll('h1');
+        console.log(headers);
+        for (let i = 0; i < headers.length; i++) {
+          let head = headers[i];
+          head.style.color = 'blue';
+          head.style.backgroundColor = 'yellow';
+        }
+        let clock = document.getElementById('clock');
+        setInterval(function () {
+          let now = new Date();
+          clock.innerHTML = now.toString();
+        }, 1000);
+      };
+    </script>
+  </head>
+  <body>
+    <!-- // 문서 객체 선택 -->
+    <h1 id="clock"></h1>
+  </body>
+</html>

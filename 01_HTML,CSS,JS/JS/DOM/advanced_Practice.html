@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
+      function showResult() {
+        document.getElementById('question').textContent = 10 + 50;
+      }
+      function hideResult() {
+        document.getElementById('question').textContent = '?';
+      }
       document.addEventListener('DOMContentLoaded', function () {
         // Q1 name 값 콘솔에 출력
         let submit = document.getElementById('btn');
@@ -24,6 +30,58 @@
             }
           }
           if (result.length > 0) console.log(result);
+        };
+
+        let clock = document.getElementById('clock');
+        let days = ['일', '월', '화', '수', '목', '금', '토'];
+
+        setInterval(() => {
+          let now = new Date();
+          let today = {
+            year: now.getFullYear(),
+            month: now.getMonth() + 1,
+            day: now.getDate(),
+            d: days[now.getDay()] + '요일',
+
+            h: now.getHours(),
+            m: now.getMinutes(),
+            s: now.getSeconds(),
+          };
+          let result = '';
+          for (let key in today) {
+            result += today[key] + ' ';
+          }
+          clock.style.color = 'red';
+          clock.innerHTML = result;
+        }, 1000);
+
+        //   let num = 85.9876543;
+        //   console.log(num.toFixed(3));
+        //   console.log(num.toFixed(0));
+
+        //   let a = '1.7';
+        //   console.log(a + 3);
+        //   console.log(parseInt(a) + 3);
+        //   console.log(Math.floor(a) + 3);
+        //   console.log(Math.ceil(a) + 3);
+        //   console.log(Number(a) + 3);
+        //   console.log(~~a + 3);
+
+        // Random 문제 생성
+        let createBtn = document.getElementById('generate');
+        createBtn.onclick = function () {
+          let x = Math.floor(Math.random() * 10) + 1;
+          let y = Math.floor(Math.random() * 10) + 1;
+          document.getElementById('randomQuestion').innerHTML =
+            x + ' + ' + y + '<span id="result"></span>';
+          document.getElementById('result').textContent = ' = ?';
+        };
+        let resultBtn = document.getElementById('rbtn');
+
+        resultBtn.onclick = function () {
+          let question = document.getElementById('randomQuestion').firstChild;
+          let result = document.getElementById('result');
+          result.innerHTML = ' = ' + eval(question.textContent);
         };
       });
     </script>
@@ -45,5 +103,21 @@
         <input id="cbtn" type="button" value="전송" />
       </div>
     </form>
+    <h1 id="clock"></h1>
+    <hr />
+    <h1
+      onmouseover="showResult()"
+      onmouseout="hideResult()"
+      style="border: 1px solid red"
+    >
+      10+50 = <span id="question1">?</span>
+    </h1>
+    <hr />
+    <h2>1~10사이의 덧셈 문제를 발생합니다.</h2>
+    <button id="generate">문제 생성</button>
+    <h1 id="randomQuestion" style="border: 1px solid red">
+      <span id="result"></span>
+    </h1>
+    <button id="rbtn">결과 보기</button>
   </body>
 </html>

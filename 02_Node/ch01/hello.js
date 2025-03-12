@@ -3,8 +3,8 @@
 // }
 
 // hello('0woy');
-
-function boring() {
-  return '지루해';
+const c = require('ansi-colors');
+function boring(name) {
+  console.log(c.green(name) + '님 안녕하세요');
 }
-console.log(boring());
+boring('0woy');

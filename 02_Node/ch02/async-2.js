@@ -10,6 +10,27 @@ const display = (result) => console.log(`${result} Complete!`);
 
 // order('Americano', display);
 
+//callback hell
+function displayLetter() {
+  console.log('A');
+  setTimeout(() => {
+    console.log('A');
+    setTimeout(() => {
+      console.log('B');
+    }, 1000);
+    setTimeout(() => {
+      console.log('C');
+    }, 1000);
+    setTimeout(() => {
+      console.log('D');
+    }, 1000);
+    setTimeout(() => {
+      console.log('stop');
+    }, 1000);
+  }, 1000);
+}
+displayLetter();
+
 // Promise
 let likePizza = false;
 const pizza = new Promise((resolve, reject) => {

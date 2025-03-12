@@ -1,0 +1,11 @@
+div {
+  text-align: center;
+}
+
+h2 {
+  color: darkblue;
+}
+
+div > p {
+  color: gray;
+}

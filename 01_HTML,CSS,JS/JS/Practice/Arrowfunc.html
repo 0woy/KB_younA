@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .opening {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box opening">this is a box</div>
+    <button>확인</button>
+    <script>
+      const box = document.querySelector('.box');
+      const button = document.querySelector('button');
+      box.addEventListener('click', function () {
+        console.log(this); // 이벤트를 발생 시킨 객체 : box
+        this.classList.toggle('opening'); // div에 opening 클래스 토글
+
+        // setTimeout(function () {
+        //   console.log(this);
+        //   this.classList.toggle('opening'); // 에러 발생
+        // }, 500);
+        setTimeout(() => {
+          console.log(this); // 상위 스코프에서 상속 - box
+          this.classList.toggle('opening'); // 에러 발생
+        }, 500);
+      });
+
+      // top-level에서 화살표 함수를 사용하는 경우
+      button.addEventListener('click', () => {
+        console.log(this); // window 객체
+      });
+    </script>
+  </body>
+</html>

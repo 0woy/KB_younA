@@ -79,16 +79,3 @@ function addContact3(name, phone, email = '이메일없음', age = 0) {
 }
 addContact3('이몽룡', '010-3434-8989');
 console.log();
-
-//Q8 화살표 함수
-const test1 = function (a, b) {
-  return a + b;
-};
-const test2 = (a, b) => a + b;
-
-const test3 = (a, b) => {
-  return a + b;
-};
-console.log(test1(3, 4));
-console.log(test2(3, 4));
-console.log(test3(3, 4));

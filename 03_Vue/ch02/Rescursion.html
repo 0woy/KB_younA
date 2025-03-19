@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #list {
+        width: 600px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      #list td,
+      #ist th {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      #list > thead > tr {
+        color: yellow;
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <table id="list">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>전화번호</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="contact in contacts" :key="contact.no">
+            <!-- <td>{{contact.no}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.tel}}</td> -->
+            <td v-text="contact.no"></td>
+            <td v-text="contact.name"></td>
+            <td v-text="contact.tel"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            pageno: 1,
+            pagesize: 4,
+            totalcount: 100,
+            contacts: [
+              { no: 1, name: 'youna', tel: '010 - 6546 - 6541' },
+              { no: 2, name: 'jieun', tel: '010 - 3213 - 5956' },
+              { no: 3, name: 'gyuwon', tel: '010 - 8976 - 5231' },
+              { no: 4, name: 'jeonga', tel: '010 - 1532 - 7546' },
+            ],
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

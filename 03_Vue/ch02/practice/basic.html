@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2 v-text="priting"></h2>
+      <input type="text" v-bind:text="message" />
+      <br />
+      <img v-bind:src="imagePath" />
+      <hr />
+      <input type="text" v-model="name" />
+      <br />
+      입력한 값: <span>{{name}}</span>
+      <hr />
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let model = { priting: 'hello vue 3!' };
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            priting: 'hello vue 3',
+            message: 'v-bind 디렉티브',
+            imagePath: 'https://contactsvc.bmaster.kro.kr/photos/18.jpg',
+            name: '',
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

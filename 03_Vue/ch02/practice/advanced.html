@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #list {
+        width: 600px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      #list td,
+      #list th {
+        border: 1px solid black;
+        text-align: center;
+      }
+      #list > thead > tr {
+        color: yellow;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <table id="list">
+        <thead>
+          <tr>
+            <td>번호</td>
+            <td>이름</td>
+            <td>전화번호</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="contact in contacts" :key="contact.no">
+            <td>{{contact.no}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.tel}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+      <table id="list">
+        <thead>
+          <tr>
+            <td>번호</td>
+            <td>이름</td>
+            <td>전화번호</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(contact,idx) in contacts" :key="contact.no">
+            <td>{{idx+1}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.tel}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            contacts: [
+              { no: '1011', name: '안유진', tel: '010-6513-6532' },
+              { no: '1012', name: '장원영', tel: '010-1655-7875' },
+              { no: '1013', name: '조유리', tel: '010-7548-1321' },
+              { no: '1014', name: '권은비', tel: '010-3215-8765' },
+            ],
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      x : <input type="text" v-model.number="x" /><br />
+      y : <input type="text" v-model.number="y" /><br />
+      덧셈 결과 : {{sum}}
+
+      <div
+        @contextmenu.prevent
+        style="position: absolute; left: 5px; top: 5px; right: 5px; bottom: 5px"
+      >
+        <a
+          href="https://facebook.com"
+          @click="confirmFB()"
+          @click.right="ctxStop()"
+          >페이스북</a
+        >
+      </div>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      var vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return { x: 0, y: 0, sum: 0 };
+        },
+        methods: {
+          ctxStop(e) {
+            console.log('mouse!');
+            event.preventDefault();
+          },
+          confirmFB(e) {
+            if (!confirm('페이스북으로 이동할까요?')) {
+              this.ctxStop(e);
+            }
+          },
+        },
+        watch: {
+          x(current, old) {
+            console.log(`## x: ${old} --> ${current}`);
+            let res = Number(this.x) + Number(this.y);
+            if (isNaN(res)) {
+              this.sum = 0;
+            } else this.sum = res;
+          },
+          y(cur, old) {
+            console.log(`## Y: ${old} --> ${cur}`);
+            let res = Number(this.x) + Number(this.y);
+            if (isNaN(res)) {
+              this.sum = 0;
+            } else this.sum = res;
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

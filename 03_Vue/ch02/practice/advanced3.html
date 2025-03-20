@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <section class="business">
+        <div class="inner">
+          <h2>고양이</h2>
+          <p>고양이들</p>
+          <ul class="list2">
+            <li v-for="cat in list" :key="cat.id">
+              <a href="">
+                <div>
+                  <img v-bind:src="cat.img" :alt="cat.title" />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script src="http://unpkg.com/vue"></script>
+    <script>
+      const data = {
+        list: [
+          {
+            id: 1,
+            img: 'https://cdn.pixabay.com/photo/2013/05/30/18/21/cat-114782_1280.jpg',
+            title: '카리스마 넘치는 고양이',
+          },
+          {
+            id: 2,
+            img: 'https://cdn.pixabay.com/photo/2018/07/13/10/20/kittens-3535404_1280.jpg',
+            title: '귀여운 새끼 고양이',
+          },
+          {
+            id: 3,
+            img: 'https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_1280.jpg',
+            title: '멍~ 때리는 고양이',
+          },
+          {
+            id: 4,
+            img: 'https://cdn.pixabay.com/photo/2023/12/15/21/47/cat-8451431_1280.jpg',
+            title: '밥을 기다리는 고양이',
+          },
+          {
+            id: 5,
+            img: 'https://cdn.pixabay.com/photo/2022/05/28/06/39/cat-7226671_1280.jpg',
+            title: '사자인가? 고양이',
+          },
+        ],
+      };
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return { list: data.list };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

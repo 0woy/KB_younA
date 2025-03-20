@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #list {
+        width: 600px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-weight: bold;
+      }
+      #list td,
+      #list th {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      #list > thead > tr {
+        background-color: deepskyblue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <table id="list">
+        <thead>
+          <tr>
+            <td>번호</td>
+            <td>이름</td>
+            <td>나이</td>
+            <td>주소</td>
+            <td>동의여부</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(contact,idx) in list" :key="contact.no">
+            <td>{{idx+1}}</td>
+            <td>{{contact.name}}</td>
+            <td>{{contact.age}}</td>
+            <td>{{contact.addr}}</td>
+            <td v-if="contact.done">동의</td>
+            <td v-else>동의 X</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            list: [
+              { seq: 1, name: '홍길동', age: 20, addr: '서울', done: true },
+              { seq: 2, name: '라이언', age: 25, addr: '제주', done: true },
+              { seq: 3, name: '네오', age: 26, addr: '울산', done: false },
+              { seq: 4, name: '프로도', age: 22, addr: '부산', done: true },
+              { seq: 5, name: '코난', age: 28, addr: '경기', done: false },
+            ],
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

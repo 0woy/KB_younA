@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="fruits">
+      <p>Apple</p>
+      <p>Banana</p>
+      <p>Orange</p>
+    </div>
+    <script>
+      const fruits = document.querySelectorAll('.fruits p');
+      const farr = Array.from(fruits);
+
+      const fname = farr.map((f) => f.textContent);
+      console.log(fname);
+
+      const digit = Array.of(1, 2, 3, 4, 5);
+      console.log(digit);
+      //   const ar = [0, 1, 2, 3];
+      //   console.log('ar = ' + ar.join());
+      //   console.log('ar = ' + ar.join(', '));
+      //   console.log('ar = ' + ar.join(' -> '));
+      //   console.log('ar = ' + ar.toString());
+      //   console.log('ar = ' + ar);
+
+      //   console.log('ar = ' + ar);
+      //   ar.reverse();
+      //   console.log('ar = ' + ar);
+
+      //   const ar = [
+      //     '태연',
+      //     '유리',
+      //     '윤아',
+      //     '써니',
+      //     '수영',
+      //     '유리',
+      //     '서현',
+      //     '효연',
+      //   ];
+      //   console.log('ar = ' + ar);
+      //   let sunny = ar.indexOf('써니');
+      //   console.log('써니는 ' + sunny + '번째에 있다. ');
+      //   let yuri = ar.indexOf('유리');
+      //   console.log('유리는 ' + yuri + '번째에 있다. ');
+      //   yuri = ar.lastIndexOf('유리');
+      //   console.log('유리는 뒤에서 ' + yuri + '번째에 있다. ');
+      //   let suji = ar.indexOf('수지');
+      //   if (suji == -1) {
+      //     console.log('수지는 소녀시대가 아니다.');
+      //   }
+
+      const ar = [0, 1, 2, 3];
+      console.log('ar = ' + ar);
+      ar.push(100, 200);
+      console.log('ar = ' + ar);
+      ar.push(300);
+      console.log('ar = ' + ar);
+      ar.pop();
+      console.log('ar = ' + ar);
+    </script>
+  </body>
+</html>

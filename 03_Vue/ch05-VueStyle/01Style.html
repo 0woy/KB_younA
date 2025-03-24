@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button
+        v-bind:style="[myColor, myLayout]"
+        @mouseover.stop="overEvent"
+        v-on:mouseout.stop="outEvent"
+      >
+        test
+      </button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            style1: {
+              backgroundColor: 'aqua',
+              color: 'black',
+            },
+            backgroundColor: 'blue',
+            color: 'red',
+
+            myColor: {
+              backgroundColor: 'orange',
+              color: 'yellow',
+            },
+            myLayout: {
+              width: '150px',
+              height: '80px',
+              textAlign: 'center',
+            },
+          };
+        },
+        methods: {
+          overEvent() {
+            // this.style1.backgroundColor = 'purple';
+            // this.style1.color = 'yellow';
+            this.myColor.backgroundColor = 'purple';
+            this.color = 'green';
+          },
+
+          outEvent() {
+            this.myColor.backgroundColor = 'orange';
+            this.color = 'red';
+
+            // this.style1.backgroundColor = 'aqua';
+            // this.style1.color = 'black';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

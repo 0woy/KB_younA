@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .buttonColor {
+        background-color: aqua;
+        color: black;
+      }
+      .buttonLayout {
+        text-align: center;
+        width: 120px;
+      }
+      .staticBorder {
+        border: khaki dashed 1px;
+      }
+      .btnColor {
+        background-color: aqua;
+        color: black;
+      }
+      .btnAlign {
+        text-align: center;
+        width: 120px;
+      }
+      .btnBorder {
+        border: red dashed 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input type="checkbox" v-model="isMyLayout" />
+      레이아웃 적용 여부 <br />
+      <button class="staticBorder" :class="[myColor, isMyLayout?myLayout:'']">
+        btn
+      </button>
+      <hr />
+      <input type="checkbox" v-model="btnStyle.btnColor" />색상<br />
+      <input type="checkbox" v-model="btnStyle.btnAlign" />정렬, 크기<br />
+      <input type="checkbox" v-model="btnStyle.btnBorder" />테두리<br />
+      <button :class="btnStyle">btn</button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            btnStyle: {
+              btnColor: false,
+              btnAlign: false,
+              btnBorder: false,
+            },
+            myColor: 'buttonColor',
+            myLayout: 'buttonLayout',
+            isMyLayout: false,
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

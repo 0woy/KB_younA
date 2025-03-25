@@ -66,13 +66,18 @@
           <div class="col">
             <ul class="list-group">
               <li
-                v-for="item in todolist"
+                v-for="item in sortedItem"
                 :key="item.id"
-                class="list-group-item"
                 :class="{'list-group-item-success':item.completed}"
-                @click="toggleCompleted(item.id)"
+                class="list-group-item"
               >
-                <span class="pointer" :class="{'todo-done': item.completed}">
+                <input
+                  type="checkbox"
+                  v-model="item.completed"
+                  @click="toggleCompleted(item.id)"
+                  class="pointer"
+                />
+                <span :class="{'todo-done': item.completed}">
                   {{item.todo}} {{item.completed?"(완료)":""}}</span
                 >
                 <span
@@ -100,6 +105,16 @@
               { id: ts + 3, todo: '키보드 사기', completed: false },
             ],
           };
+        },
+        computed: {
+          sortedItem() {
+            return [...this.todolist].sort((a, b) => {
+              if (a.completed !== b.completed) {
+                return a.completed ? 1 : -1;
+              }
+              return a.todo.localeCompare(b.todo);
+            });
+          },
         },
         methods: {
           addTodo() {

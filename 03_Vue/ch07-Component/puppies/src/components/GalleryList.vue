@@ -4,7 +4,7 @@
       v-for="img in images"
       :key="img.id"
       :img="img"
-      @item-clicked="postImgToGallery"
+      @item-clicked="handleItemClick"
     />
   </div>
 </template>
@@ -13,10 +13,10 @@ import GalleryListItem from './GalleryListItem.vue';
 export default {
   name: 'GalleyList',
   components: { GalleryListItem },
-  inject: ['images'],
+  props: ['images'],
   methods: {
-    postImgToGallery(image) {
-      this.$emit('item-clicked', image);
+    handleItemClick(img) {
+      this.$emit('item-clicked', img);
     },
   },
 };

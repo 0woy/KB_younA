@@ -3,38 +3,17 @@ import Gallery from './components/Gallery.vue';
 </script>
 
 <template>
-  <Gallery />
+  <div class="center-container">
+    <Gallery />
+  </div>
 </template>
 
 <style scoped>
-* {
-  margin: 0 0;
-}
-
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.center-container {
+  display: flex;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: 100vh; /* 화면 전체 높이 */
+  width: 100%; /* 부모 div가 전체 너비를 차지 */
 }
 </style>

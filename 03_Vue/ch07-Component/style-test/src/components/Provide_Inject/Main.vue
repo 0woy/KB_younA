@@ -8,11 +8,10 @@
 <script>
 /** yoonA younA see bangawoyo; */
 import { computed } from 'vue';
-import SongListItem from './SongListItem.vue';
 import SongList from './SongList.vue';
 export default {
   name: 'Main',
-  components: { SongListItem, SongList },
+  components: { SongList },
   data() {
     return {
       songs: [

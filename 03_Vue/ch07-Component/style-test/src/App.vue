@@ -1,20 +1,21 @@
 <template>
-  <Child1 />
+  <!-- <ScopedSlotTest /> -->
+  <!-- <Child1 />
   <Child2 />
-  <Child3 />
-  <!-- 
-  <hr />
+  <Child3 /> -->
+
+  <!-- <hr />
   <NoSlotTest />
   <hr />
   <SlotTest />
   <hr />
   <NamedSlotTest />
-  <hr />
-  <InputNameApp />
+  <hr /> -->
+  <!-- <InputNameApp /> -->
   <hr />
   <Main />
-  <hr />
-  <LayoutApp /> -->
+  <!-- <hr />
+  <LayoutApp />  -->
 </template>
 
 <script>
@@ -23,6 +24,7 @@ import Child2 from './components/comp-style/Child2.vue';
 import Child3 from './components/comp-style/Child3.vue';
 import NoSlotTest from './components/Slots/NoSlotTest.vue';
 import SlotTest from './components/Slots/SlotTest.vue';
+import ScopedSlotTest from './components/Slots/ScopedSlotTest.vue';
 import InputNameApp from './components/user_V_model/InputNameApp.vue';
 import Main from './components/Provide_Inject/Main.vue';
 import NamedSlotTest from './components/Slots/NamedSlotTest.vue';
@@ -39,6 +41,7 @@ export default {
     Main,
     NamedSlotTest,
     LayoutApp,
+    ScopedSlotTest,
   },
 };
 </script>

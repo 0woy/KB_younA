@@ -1,6 +1,6 @@
 <template>
   <div>
-    <InputName v-model:name="searchName" />
+    <InputName v-model:search="searchName" />
     <h3>검색어: {{ searchName }}</h3>
   </div>
 </template>

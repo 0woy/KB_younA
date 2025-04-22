@@ -50,11 +50,12 @@
 <script setup>
 import { inject, reactive } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-const todoList = inject('todoList');
-const { updateTodo } = inject('actions');
+import { useTodoListStore } from '@/stores/todoList';
+
 const router = useRouter();
 const currentRoute = useRoute();
-const matchedTodoItem = todoList.value.find(
+const { todoList, updateTodo } = useTodoListStore();
+const matchedTodoItem = todoList.find(
   (item) => item.id === currentRoute.params.id
 );
 if (!matchedTodoItem) {

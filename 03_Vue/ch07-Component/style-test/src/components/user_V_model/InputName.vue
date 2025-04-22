@@ -2,14 +2,14 @@
   <div>
     <input
       type="text"
-      :value="name"
-      @input="$emit('update:name', $event.target.value)"
+      :value="search"
+      @input="$emit('update:search', $event.target.value)"
     />
   </div>
 </template>
 <script>
 export default {
   name: 'InputName',
-  props: ['name'],
+  props: ['search'],
 };
 </script>

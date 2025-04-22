@@ -20,11 +20,19 @@
       </ul>
     </div>
   </div>
+  <div class="row">
+    <div class="col">
+      <span>완료된 할 일 : {{ doneCount }}</span>
+    </div>
+  </div>
 </template>
 <script setup>
 import TodoItem from '@/components/TodoItem.vue';
-import { inject } from 'vue';
+import { useTodoListStore } from '@/stores/todoList';
+import { computed, inject } from 'vue';
 
-const todoList = inject('todoList');
-const { fetchTodoList } = inject('actions');
+const todoListStore = useTodoListStore();
+const { fetchTodoList } = todoListStore;
+const doneCount = computed(() => todoListStore.doneCount);
+const todoList = computed(() => todoListStore.todoList);
 </script>

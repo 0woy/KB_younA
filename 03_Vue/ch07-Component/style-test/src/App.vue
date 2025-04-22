@@ -13,9 +13,10 @@
   <hr /> -->
   <!-- <InputNameApp /> -->
   <hr />
-  <Main />
+  <!-- <Main /> -->
   <!-- <hr />
   <LayoutApp />  -->
+  <InputNameApp />
 </template>
 
 <script>

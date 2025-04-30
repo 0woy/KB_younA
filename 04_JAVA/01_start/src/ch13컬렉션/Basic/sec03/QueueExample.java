@@ -6,19 +6,24 @@ import java.util.Queue;
 public class QueueExample {
     public static void main(String[] args) {
         Queue<Message> que = new LinkedList<>();
+        Command [] commands = new Command[]{
+                new sendMail(),
+                new sendSMS(),
+                new sendKakaotalk()
+        };
         que.add(new Message("sendMail", "홍길동"));
         que.add(new Message("sendSMS", "신용권"));
         que.add(new Message("sendKakaotalk", "김자바"));
 
         while (!que.isEmpty()) {
             Message msg = que.poll();
-            String command ="";
+            int idx =0;
             switch (msg.command){
-                case "sendMail": command="메일"; break;
-                case "sendSMS": command="SMS"; break;
-                case "sendKakaotalk": command="카카오톡"; break;
+                case "sendMail": idx=0; break;
+                case "sendSMS": idx=1; break;
+                case "sendKakaotalk": idx=2; break;
             }
-            System.out.println(msg.to+"님에게 "+command+"을/를 보냅니다.");
+            commands[idx].execute(msg.to);
         }
     }
 }

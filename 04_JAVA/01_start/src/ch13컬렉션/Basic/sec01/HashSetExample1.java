@@ -6,7 +6,6 @@ import java.util.Set;
 public class HashSetExample1 {
     public static void main(String[] args) {
         Set<String> set = new HashSet<>();
-        Set<Member> members = new HashSet<>();
 
         set.add("JAVA");
         set.add("JDBC");
@@ -17,9 +16,6 @@ public class HashSetExample1 {
         int size = set.size();
         System.out.println("총 객체 수: "+size);
 
-        //Member 객체 저장
-        members.add(new Member("홍길동", 30));
-        members.add(new Member("홍길동", 30));
-        System.out.println("총 객체 수: "+members.size());
+
     }
 }

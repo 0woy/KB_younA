@@ -41,4 +41,6 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-.properties
+mybatis-config.xml
+log4jdbc.log4j2.properties
+application.properties

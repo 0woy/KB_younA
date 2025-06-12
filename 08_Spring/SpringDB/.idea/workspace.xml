@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4d57665-4ebb-4ab9-854a-ba4cd1ede733" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/springdb/mapper/TimeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4jdbc.log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/scoula/springdb/mapper/TimeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/scoula/persistence/JDBCTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/scoula/springdb/mapper/TimeMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/scoula/springdb/config/RootconfigTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Builder/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Builder/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Factory/idcard/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Factory/idcard/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Factory/idcard/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Factory/idcard/Product.java" afterDir="false" />
@@ -73,7 +67,9 @@
       <change beforePath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/session/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/session/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/session/loginForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/session/loginForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../srpingMVC/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../srpingMVC/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyBatisSpringLegacy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyBatisSpringLegacy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../node_modules/.bin/nanoid" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../node_modules/.bin/nanoid.cmd" beforeDir="false" />
@@ -633,54 +629,144 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "0woy"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;0woy&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/0woy/KB_younA.git",
-    "accountId": "ba6a5db4-58dd-45c8-b5b1-a933a2667312"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/0woy/KB_younA.git&quot;,
+    &quot;accountId&quot;: &quot;ba6a5db4-58dd-45c8-b5b1-a933a2667312&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2yLJH8tFrJqU7Hqum7X1fqKxGH5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.TimeMapperTest.getTime2.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/KB_younA/08_Spring/MyBatisSpringLegacy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.JDBCTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RootconfigTest.dataSource.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TimeMapperTest.getDate.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TimeMapperTest.getTime2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/KB_younA/08_Spring/MyBatisSpringLegacy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\KB_younA\08_Spring\SpringDB\src\main\resources\org\scoula\springdb" />
       <recent name="C:\KB_younA\08_Spring\SpringDB\src\main\resources\org\scoula\" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.scoula.springdb.config" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.RootconfigTest.dataSource">
+    <configuration name="JDBCTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.scoula.persistence.JDBCTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RootconfigTest.dataSource" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.scoula.springdb.config.RootconfigTest.dataSource&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="TimeMapperTest.getDate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.scoula.springdb.mapper.TimeMapperTest.getDate&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="TimeMapperTest.getTime2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -707,6 +793,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RootconfigTest.dataSource" />
+        <item itemvalue="Gradle.JDBCTest" />
+        <item itemvalue="Gradle.TimeMapperTest.getDate" />
         <item itemvalue="Gradle.TimeMapperTest.getTime2" />
       </list>
     </recent_temporary>
@@ -731,6 +820,9 @@
       <option name="presentableId" value="Default" />
       <updated>1749607830590</updated>
       <workItem from="1749607833085" duration="1469000" />
+      <workItem from="1749615006927" duration="1645000" />
+      <workItem from="1749617064188" duration="104000" />
+      <workItem from="1749687089217" duration="80000" />
     </task>
     <servers />
   </component>

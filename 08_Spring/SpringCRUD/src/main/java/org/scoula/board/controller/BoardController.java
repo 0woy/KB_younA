@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @Slf4j
@@ -43,16 +44,19 @@ public class BoardController {
     }
 
     @PostMapping("/update")
-    String update(BoardDTO board) {
-        log.info("update: "+board);
-        service.update(board);
+    String update(BoardDTO board, RedirectAttributes ra) {
+        if(service.update(board)){
+            ra.addFlashAttribute("result", "success");
+        }
 
         return "redirect:/board/list";
     }
 
     @PostMapping("/delete")
-    String delete(@RequestParam("no") Long no) {
-        service.delete(no);
+    String delete(@RequestParam("no") Long no, RedirectAttributes ra) {
+        if(service.delete(no)){
+            ra.addFlashAttribute("result", "success");
+        }
         return "redirect:/board/list";
     }
 

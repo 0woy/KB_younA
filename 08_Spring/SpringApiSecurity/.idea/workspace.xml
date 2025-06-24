@@ -10,6 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e8c4101-40d1-479d-b932-b95708d2f95e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/account/dto/AuthResultDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/account/dto/LoginDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/account/dto/UserInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/handler/CustomAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/handler/JwtUsernamePasswordAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/handler/LoginFailureHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/handler/LoginSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/util/JsonResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/scoula/security/util/JwtProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/scoula/security/util/JwtProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Builder/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Builder/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Factory/idcard/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Factory/idcard/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Factory/idcard/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../04_JAVA/DesignPattern/src/Factory/idcard/Product.java" afterDir="false" />
@@ -71,8 +81,8 @@
       <change beforePath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/main.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/session/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/session/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/session/loginForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../07_JSP/servlet_ex2/src/main/webapp/session/loginForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecurity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecurity/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecurity/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../node_modules/.bin/nanoid" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../node_modules/.bin/nanoid.cmd" beforeDir="false" />
@@ -774,7 +784,11 @@
   <component name="ProjectId" id="2yt97Epf2rD9xINMBcM4qNcLp30" />
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build SpringApiSecurity.executor": "Run",
     "Gradle.Build SpringSecurity.executor": "Run",
+    "Gradle.JwtProcessorTest.generateToken.executor": "Run",
+    "Gradle.JwtProcessorTest.getUsername.executor": "Run",
+    "Gradle.JwtProcessorTest.validateToken.executor": "Run",
     "Gradle.UserDetailsMapperTest.get.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -810,11 +824,84 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.scoula.security.util" />
       <recent name="org.scoula.security.account.mapper" />
       <recent name="org.scoula.security.config" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.105">
+    <configuration name="JwtProcessorTest.generateToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.scoula.security.util.JwtProcessorTest.generateToken&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JwtProcessorTest.getUsername" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.scoula.security.util.JwtProcessorTest.getUsername&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="JwtProcessorTest.validateToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.scoula.security.util.JwtProcessorTest.validateToken&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="UserDetailsMapperTest.get" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -842,14 +929,14 @@
     <configuration name="Tomcat 9.0.105" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.105" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Gradle : org.scoula : SpringSecurity-1.0-SNAPSHOT.war">
+        <artifact name="Gradle : org.scoula : SpringApiSecurity-1.0-SNAPSHOT.war">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="f1094657-07eb-4ef7-ae2a-b363a0d0d3c4" />
+        <option name="BASE_DIRECTORY_NAME" value="700d8d83-af35-4e1b-9e77-91cc04a9e1b5" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -857,7 +944,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="56373" />
+        <option name="DEBUG_PORT" value="54357" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -922,12 +1009,22 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : org.scoula : SpringSecurity-1.0-SNAPSHOT.war" />
+          <artifact name="Gradle : org.scoula : SpringApiSecurity-1.0-SNAPSHOT.war" />
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.JwtProcessorTest.generateToken" />
+      <item itemvalue="Gradle.JwtProcessorTest.getUsername" />
+      <item itemvalue="Gradle.JwtProcessorTest.validateToken" />
+      <item itemvalue="Gradle.UserDetailsMapperTest.get" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.105" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JwtProcessorTest.validateToken" />
+        <item itemvalue="Gradle.JwtProcessorTest.getUsername" />
+        <item itemvalue="Gradle.JwtProcessorTest.generateToken" />
         <item itemvalue="Gradle.UserDetailsMapperTest.get" />
       </list>
     </recent_temporary>
@@ -952,7 +1049,8 @@
       <workItem from="1750642890347" duration="5842000" />
       <workItem from="1750667673279" duration="1050000" />
       <workItem from="1750740630969" duration="457000" />
-      <workItem from="1750741097538" duration="125000" />
+      <workItem from="1750741097538" duration="21000" />
+      <workItem from="1750741224790" duration="2680000" />
     </task>
     <servers />
   </component>

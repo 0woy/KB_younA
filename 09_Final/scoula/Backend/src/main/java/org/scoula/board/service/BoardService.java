@@ -1,0 +1,17 @@
+package org.scoula.board.service;
+
+import org.scoula.board.domain.BoardAttachmentVO;
+import org.scoula.board.dto.BoardDTO;
+
+import java.util.List;
+
+public interface BoardService {
+    public List<BoardDTO> getList();
+    public BoardDTO getOne(Long no);
+    public  BoardDTO create(BoardDTO board);
+    public BoardDTO update(BoardDTO board);
+    public BoardDTO delete(Long no);
+
+    public BoardAttachmentVO getAttachment(Long no);
+    public boolean deleteAttachment(Long no);
+}

@@ -6,13 +6,14 @@ import lombok.extern.log4j.Log4j2;
 import org.scoula.board.domain.BoardAttachmentVO;
 import org.scoula.board.dto.BoardDTO;
 import org.scoula.board.service.BoardService;
+import org.scoula.common.pagination.Page;
+import org.scoula.common.pagination.PageRequest;
 import org.scoula.common.util.UploadFiles;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/board")
@@ -22,17 +23,22 @@ import java.util.List;
 public class BoardController {
     private final BoardService service;
 
-    @ApiOperation(value = "게시글 목록", notes = "게시글 목록을 얻는 API")
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "성공적으로 요청이 처리되었습니다.", response = BoardDTO.class),
-            @ApiResponse(code = 400, message = "잘못된 요청입니다."),
-            @ApiResponse(code = 500, message = "서버에 오류가 발생했습니다.")
-    })
-
     @GetMapping("")
-    public ResponseEntity<List<BoardDTO>> getList() {
-        return ResponseEntity.ok(service.getList());
+    public ResponseEntity<Page> getList(PageRequest pageRequest) {
+        return ResponseEntity.ok(service.getPage(pageRequest));
     }
+
+//    @ApiOperation(value = "게시글 목록", notes = "게시글 목록을 얻는 API")
+//    @ApiResponses(value = {
+//            @ApiResponse(code = 200, message = "성공적으로 요청이 처리되었습니다.", response = BoardDTO.class),
+//            @ApiResponse(code = 400, message = "잘못된 요청입니다."),
+//            @ApiResponse(code = 500, message = "서버에 오류가 발생했습니다.")
+//    })
+//
+//    @GetMapping("")
+//    public ResponseEntity<List<BoardDTO>> getList() {
+//        return ResponseEntity.ok(service.getList());
+//    }
 
     @ApiOperation(value = "상세 정보 얻기", notes = "게시글 상세 정보를 얻는 API")
     @ApiResponses(value = {

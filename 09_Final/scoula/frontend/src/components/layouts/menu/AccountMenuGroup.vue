@@ -17,6 +17,7 @@ const username = computed(() => auth.username);
   <ul class="navbar-nav ms-auto">
     <template v-if="isLogin">
       <AccoutMenuItem :username="username" />
+      <LogoutMenuItem />
     </template>
     <template v-else>
       <MenuItem :menu="login" />

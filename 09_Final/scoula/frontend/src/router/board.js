@@ -1,3 +1,5 @@
+import { isAuthenticated } from '@/util/guard';
+
 export default [
   {
     path: '/board/list',
@@ -15,11 +17,13 @@ export default [
     path: '/board/create',
     name: 'board/create',
     component: () => import('../pages/board/BoardCreatePage.vue'),
+    beforeEnter: isAuthenticated,
   },
 
   {
     path: '/board/update/:no',
     name: 'board/update',
     component: () => import('../pages/board/BoardUpdatePage.vue'),
+    beforeEnter: isAuthenticated,
   },
 ];

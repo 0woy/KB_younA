@@ -14,7 +14,6 @@ const member = reactive({
 const error = ref('');
 const disableSubmit = computed(() => !(member.username && member.password));
 const login = async () => {
-  console.log(member);
   try {
     await auth.login(member);
     router.push('/');

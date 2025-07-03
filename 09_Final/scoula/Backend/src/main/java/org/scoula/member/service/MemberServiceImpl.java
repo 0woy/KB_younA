@@ -2,7 +2,10 @@ package org.scoula.member.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.scoula.member.dto.ChangePasswrodDTO;
 import org.scoula.member.dto.MemberJoinDTO;
+import org.scoula.member.dto.MemberUpdateDTO;
+import org.scoula.member.exception.PasswordMissmatchException;
 import org.scoula.member.mapper.MemberMapper;
 import org.scoula.security.account.domain.AuthVO;
 import org.scoula.security.account.domain.MemberDTO;
@@ -31,6 +34,7 @@ public class MemberServiceImpl implements MemberService {
         return member != null;
     }
 
+
     @Override
     public MemberDTO get(String username) {
         MemberVO member = Optional.ofNullable(memberMapper.get(username))
@@ -41,7 +45,7 @@ public class MemberServiceImpl implements MemberService {
 
     private void saveAvatar(MultipartFile avatar, String username) {
         // avatar upload
-        if (avatar != null && avatar.isEmpty()) {
+        if (avatar != null && !avatar.isEmpty()) {
             File dest = new File("c:/upload/avatar/", username + ".png");
             try {
                 avatar.transferTo(dest);
@@ -70,5 +74,29 @@ public class MemberServiceImpl implements MemberService {
         saveAvatar(joinDTO.getAvatar(), memberVO.getUsername());
 
         return get(memberVO.getUsername());
+    }
+
+    @Override
+    public MemberDTO update(MemberUpdateDTO member) {
+        MemberVO vo = memberMapper.get(member.getUsername());
+        if (!passwordEncoder.matches(member.getPassword(), vo.getPassword())) {
+            throw new PasswordMissmatchException();
+        }
+
+        memberMapper.update(member.toVO());
+        saveAvatar(member.getAvatar(), member.getUsername());
+        return get(member.getUsername());
+    }
+
+    @Override
+    public void changePassword(ChangePasswrodDTO changePasswrod) {
+        MemberVO member = memberMapper.get(changePasswrod.getUsername());
+        if (!passwordEncoder.matches(changePasswrod.getOldPassword(), member.getPassword())) {
+            throw new PasswordMissmatchException();
+        }
+
+        changePasswrod.setNewPassword(passwordEncoder.encode(changePasswrod.getNewPassword()));
+
+        memberMapper.updatePassword(changePasswrod);
     }
 }

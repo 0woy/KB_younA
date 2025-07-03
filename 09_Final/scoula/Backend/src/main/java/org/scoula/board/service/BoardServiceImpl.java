@@ -34,10 +34,10 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public BoardDTO getOne(Long no) {
-        log.info("getOne............." + no);
+    public BoardDTO get(Long no) {
+        log.info("get............." + no);
 
-        BoardDTO board = BoardDTO.of(mapper.getOne(no));
+        BoardDTO board = BoardDTO.of(mapper.get(no));
         return Optional.ofNullable(board)
                 .orElseThrow(NoSuchElementException::new);
     }
@@ -54,7 +54,7 @@ public class BoardServiceImpl implements BoardService {
             upload(boardVO.getNo(), files);
         }
 
-        return getOne(boardVO.getNo());
+        return get(boardVO.getNo());
     }
 
     private void upload(Long bno, List<MultipartFile> files) {
@@ -73,15 +73,22 @@ public class BoardServiceImpl implements BoardService {
     @Override
     public BoardDTO update(BoardDTO board) {
         log.info("update.............." + board);
-        mapper.update(board.toVO());
+        BoardVO boardVO = board.toVO();
+        mapper.update(boardVO);
 
-        return getOne(board.getNo());
+        // 파일 업로드 처리
+        List<MultipartFile> files = board.getFiles();
+        if (files != null && !files.isEmpty()) {
+            upload(boardVO.getNo(), files);
+        }
+
+        return get(board.getNo());
     }
 
     @Override
     public BoardDTO delete(Long no) {
         log.info("delete............." + no);
-        BoardDTO board = getOne(no);
+        BoardDTO board = get(no);
         mapper.delete(no);
 
         return board;

@@ -100,17 +100,26 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests() // 경로별 접근 권한 설정
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
-//                .antMatchers("/api/security/all").permitAll()        // 모두 허용
-//                .antMatchers("/api/security/member").access("hasRole('ROLE_MEMBER')")    // ROLE_MEMBER 이상 접근 허용
-//                .antMatchers("/api/security/admin").access("hasRole('ROLE_ADMIN')")      // ROLE_ADMIN 이상 접근 허용
-//                .anyRequest().authenticated();  // 나머지는 로그인 된 경우 모두 허용
-                // 일단 모든 접근 허용
+                .antMatchers(HttpMethod.POST, "/api/member").authenticated()
+                .antMatchers(HttpMethod.PUT, "/api/member", "/api/member/*/changepassword").authenticated()
+
+                .antMatchers(HttpMethod.POST, "/api/board/**").authenticated()
+                .antMatchers(HttpMethod.PUT, "/api/board/**").authenticated()
+                .antMatchers(HttpMethod.DELETE, "/api/board/**").authenticated()
                 .anyRequest().permitAll();
 
         http.httpBasic().disable()        // 기본 HTTP 인증 비활성화
                 .csrf().disable()       // CSRF 비활성화
                 .formLogin().disable()  // formLogin 비활성화  관련 필터 해제
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS); // 세션 생성 모드 설정
+
+        /** Previous Mathcers
+         //             .antMatchers("/api/security/all").permitAll()        // 모두 허용
+         //                .antMatchers("/api/security/member").access("hasRole('ROLE_MEMBER')")    // ROLE_MEMBER 이상 접근 허용
+         //                .antMatchers("/api/security/admin").access("hasRole('ROLE_ADMIN')")      // ROLE_ADMIN 이상 접근 허용
+         //                .anyRequest().authenticated();  // 나머지는 로그인 된 경우 모두 허용
+
+         */
     }
 
 
